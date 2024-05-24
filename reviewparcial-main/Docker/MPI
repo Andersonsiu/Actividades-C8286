@@ -1,0 +1,13 @@
+# Utiliza una imagen base de Ubuntu
+FROM ubuntu:20.04
+# Instala dependencias necesarias
+RUN apt-get update && apt-get install -y mpich wget
+# Descarga y descomprime un ejemplo de código MPI
+RUN wget http://www.example.com/my-mpi-example.tar.gz
+RUN tar -xzvf my-mpi-example.tar.gz && mv my-mpi-example /mpi-example
+# Establece el directorio de trabajo
+WORKDIR /mpi-example
+# Compila el programa MPI
+RUN mpicc -o mpi_hello_world mpi_hello_world.c
+# Corre el programa MPI usando 4 procesos
+CMD ["mpirun", "-np", "4", "./mpi_hello_world"]
