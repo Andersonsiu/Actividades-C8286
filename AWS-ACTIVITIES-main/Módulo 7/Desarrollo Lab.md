@@ -16,24 +16,31 @@ Query :
 
 ![image.png](https://i.postimg.cc/44qrjDgD/image.png)
 
+
 Result :
+
 ![image.png](https://i.postimg.cc/xTmWQ6jc/image.png)
+
 
 Query :
 
 ![image.png](https://i.postimg.cc/pLt3LKyk/image.png)
 
+
 Result: 
 
 ![image.png](https://i.postimg.cc/t4twZ7xb/image.png)
+
 
 Query :
 
 ![image.png](https://i.postimg.cc/tT7MM5mR/image.png)
 
+
 Result :
 
 ![image.png](https://i.postimg.cc/G2N5wyZF/image.png)
+
 
 **Task 3**
 
