@@ -1,0 +1,25 @@
+GIT
+
+1. CREAR REPO EN GITHUB
+2. CLAVE HTTPS
+3. CREAR FILE EN TERMINAL
+4. ENTRAR A LA UBICACIÓN
+
+5.
+- git init
+
+6.
+- git remote add origin [https://github.com/Andersonsiu/parcial-computacion.git](https://github.com/Andersonsiu/parcial-computacion.git)
+
+7.
+- git add .
+
+8.
+- git commit -m “aquí va el texto xd”
+
+9.
+- git pust origin master
+
+10.
+- Poner usuario (Andersonsiu)
+- Poner token clasic en setting del github (Ir a settings y generar token)

@@ -1,0 +1,33 @@
+Comandos básicos para usar Kubernetes 
+
+1. Iniciar Minikube
+minikube start
+
+2. Crear un Deployment
+Crea un archivo llamado deployment.yaml
+
+3. Aplica el Deployment:
+kubectl apply -f deployment.yaml
+
+4. Verificar los Pods
+kubectl get pods
+
+5. Exponer el Deployment
+kubectl expose deployment nginx-deployment --type=LoadBalancer --port=80
+
+6. Acceder a la Aplicación
+minikube service nginx-deployment
+
+Comandos Adicionales
+
+7. Verificar el estado del cluster:
+kubectl cluster-info
+
+8. Obtener información sobre los nodos:
+kubectl get nodes
+
+9. Describir un recurso específico:
+kubectl describe pod <pod-name>
+
+10. Eliminar un Deployment:
+kubectl delete deployment nginx-deployment

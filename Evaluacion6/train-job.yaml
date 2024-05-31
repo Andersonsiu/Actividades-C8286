@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: train-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: train-container
+        imagePullPolicy: Always
+        image: <uri to Docker image containing training script>
+        command: ["python3", "train.py"]
+      restartPolicy: Never
+      backoffLimit: 0
+

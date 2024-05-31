@@ -1,0 +1,24 @@
+# Utiliza la imagen base de OpenJDK que tiene Java instalado
+FROM openjdk:8-jdk
+# Versión de Hadoop a instalar
+ENV HADOOP_VERSION 3.2.1
+ENV HADOOP_URL https://www.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-
+$HADOOP_VERSION.tar.gz
+# Instala Hadoop
+RUN set -x \
+  && wget "$HADOOP_URL" -O /tmp/hadoop.tar.gz \
+  && tar -xvf /tmp/hadoop.tar.gz -C /opt/ \
+  && ln -s /opt/hadoop-$HADOOP_VERSION /opt/hadoop \
+  && rm /tmp/hadoop.tar.gz
+# Configura el entorno
+ENV HADOOP_HOME /opt/hadoop
+ENV PATH $PATH:$HADOOP_HOME/bin
+ENV PATH $PATH:$HADOOP_HOME/sbin
+ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+# Copia configuración personalizada
+COPY hadoop-config/* $HADOOP_CONF_DIR/
+# Expone el puerto del NameNode y DataNode
+EXPOSE 9870 9864
+# Configura el punto de entrada para iniciar los servicios de Hadoop y mantener el contenedor en ejecución
+ENTRYPOINT ["/opt/hadoop/bin/hadoop"]
+CMD ["namenode"]
