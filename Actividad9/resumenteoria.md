@@ -7,37 +7,35 @@ Tipos de Memoria Compartida:
 
 Memoria Compartida Uniforme (UMA):
 
-•	Todos los procesadores tienen el mismo tiempo de acceso a la memoria principal.
-•	Ejemplos: Estaciones de trabajo multiprocesador, servidores de gama media.
-•	Ventajas: Simplicidad en la programación y facilidad en la coherencia de caché.
-•	Desventajas: No escala bien con un gran número de procesadores debido a la contención de memoria y cuellos de botella en el bus de memoria.
+- Todos los procesadores tienen el mismo tiempo de acceso a la memoria principal.
+- Ventajas: Simplicidad en la programación y facilidad en la coherencia de caché.
+- Desventajas: No escala bien con un gran número de procesadores debido a la contención de memoria y cuellos de botella en el bus de memoria.
 
 Memoria Compartida No Uniforme (NUMA):
-•	Cada procesador tiene su memoria local y el tiempo de acceso varía según la memoria accedida (local o remota).
-•	Ejemplos: Servidores de alto rendimiento, sistemas NUMA como AMD EPYC e Intel Xeon.
-•	Ventajas: Mejor escalabilidad y acceso más rápido a la memoria local.
-•	Desventajas: Mayor complejidad en la programación debido a la latencia variable en el acceso a la memoria.
+- Cada procesador tiene su memoria local y el tiempo de acceso varía según la memoria accedida (local o remota).
+- Ejemplos: Servidores de alto rendimiento, sistemas NUMA como AMD EPYC e Intel Xeon.
+- Ventajas: Mejor escalabilidad y acceso más rápido a la memoria local.
+- Desventajas: Mayor complejidad en la programación debido a la latencia variable en el acceso a la memoria.
 
 Ventajas y Desventajas de la Memoria Compartida:
-•	Ventajas:
-•	Facilidad de programación.
-•	Rendimiento optimizado en sistemas UMA.
-•	Gestión de coherencia de caché.
-•	Desventajas:
-•	Limitaciones de escalabilidad en sistemas UMA.
-•	Complejidad en NUMA.
-•	Costos más altos debido a hardware sofisticado.
+**Ventajas:**
+- Facilidad de programación.
+- Rendimiento optimizado en sistemas UMA.
+- Gestión de coherencia de caché.
+**Desventajas:**
+- Limitaciones de escalabilidad en sistemas UMA.
+- Complejidad en NUMA.
+- Costos más altos debido a hardware sofisticado.
 
 3. Arquitectura de Memoria Distribuida
 En una arquitectura de memoria distribuida, cada procesador tiene su propia memoria local y la comunicación entre procesadores se realiza mediante el paso de mensajes.
 
 Tipos de Arquitecturas de Memoria Distribuida:
 
-•	Multicomputadores:
-•	Sistemas compuestos por varios nodos de computación, cada uno con su propia CPU y memoria, interconectados mediante una red de alta velocidad.
-•	Ejemplos: Supercomputadoras, clústeres de computadoras.
-•	Ventajas: Alta escalabilidad y mejor tolerancia a fallos.
-•	Desventajas: Programación más compleja debido a la gestión de la comunicación y sincronización entre nodos.
+- Multicomputadores:
+- Sistemas compuestos por varios nodos de computación, cada uno con su propia CPU y memoria, interconectados mediante una red de alta velocidad.
+- Ventajas: Alta escalabilidad y mejor tolerancia a fallos.
+- Desventajas: Programación más compleja debido a la gestión de la comunicación y sincronización entre nodos.
 
 •	Clústeres de Computadoras:
 •	Varios sistemas completos (nodos) conectados a través de una red para trabajar juntos como un solo sistema.
