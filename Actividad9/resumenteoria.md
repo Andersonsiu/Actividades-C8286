@@ -6,6 +6,7 @@ En una arquitectura de memoria compartida, todos los procesadores acceden a un �
 Tipos de Memoria Compartida:
 
 Memoria Compartida Uniforme (UMA):
+
 •	Todos los procesadores tienen el mismo tiempo de acceso a la memoria principal.
 •	Ejemplos: Estaciones de trabajo multiprocesador, servidores de gama media.
 •	Ventajas: Simplicidad en la programación y facilidad en la coherencia de caché.
