@@ -16,6 +16,7 @@ Memoria Compartida No Uniforme (NUMA):
 •	Ejemplos: Servidores de alto rendimiento, sistemas NUMA como AMD EPYC e Intel Xeon.
 •	Ventajas: Mejor escalabilidad y acceso más rápido a la memoria local.
 •	Desventajas: Mayor complejidad en la programación debido a la latencia variable en el acceso a la memoria.
+
 Ventajas y Desventajas de la Memoria Compartida:
 •	Ventajas:
 •	Facilidad de programación.
@@ -54,11 +55,6 @@ Ventajas y Desventajas de la Memoria Distribuida:
 
 5. Arquitecturas Paralelas Híbridas
 Las arquitecturas híbridas combinan elementos de arquitecturas de memoria compartida y distribuida para aprovechar las ventajas de ambas y mitigar sus desventajas.
-
-Ejemplo de Arquitectura Híbrida:
-•	Clúster de Nodos NUMA:
-•	Cada nodo es un sistema NUMA con múltiples procesadores y memoria local.
-•	Los nodos están conectados a través de una red de alta velocidad, formando un sistema de memoria distribuida.
 
 Ventajas de las Arquitecturas Híbridas:
 •	Escalabilidad mejorada.
