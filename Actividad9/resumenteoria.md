@@ -1,14 +1,17 @@
-##Arquitecturas de Sistemas Paralelos##
+**Arquitecturas de Sistemas Paralelos**
 
 1. Arquitectura de Memoria Compartida
 En una arquitectura de memoria compartida, todos los procesadores acceden a un único espacio de memoria global. Este tipo de arquitectura facilita la programación debido a la comunicación y sincronización a través de variables compartidas.
+
 Tipos de Memoria Compartida:
-•	Memoria Compartida Uniforme (UMA):
+
+Memoria Compartida Uniforme (UMA):
 •	Todos los procesadores tienen el mismo tiempo de acceso a la memoria principal.
 •	Ejemplos: Estaciones de trabajo multiprocesador, servidores de gama media.
 •	Ventajas: Simplicidad en la programación y facilidad en la coherencia de caché.
 •	Desventajas: No escala bien con un gran número de procesadores debido a la contención de memoria y cuellos de botella en el bus de memoria.
-•	Memoria Compartida No Uniforme (NUMA):
+
+Memoria Compartida No Uniforme (NUMA):
 •	Cada procesador tiene su memoria local y el tiempo de acceso varía según la memoria accedida (local o remota).
 •	Ejemplos: Servidores de alto rendimiento, sistemas NUMA como AMD EPYC e Intel Xeon.
 •	Ventajas: Mejor escalabilidad y acceso más rápido a la memoria local.
@@ -22,8 +25,10 @@ Ventajas y Desventajas de la Memoria Compartida:
 •	Limitaciones de escalabilidad en sistemas UMA.
 •	Complejidad en NUMA.
 •	Costos más altos debido a hardware sofisticado.
-2. Arquitectura de Memoria Distribuida
+
+3. Arquitectura de Memoria Distribuida
 En una arquitectura de memoria distribuida, cada procesador tiene su propia memoria local y la comunicación entre procesadores se realiza mediante el paso de mensajes.
+
 Tipos de Arquitecturas de Memoria Distribuida:
 •	Multicomputadores:
 •	Sistemas compuestos por varios nodos de computación, cada uno con su propia CPU y memoria, interconectados mediante una red de alta velocidad.
@@ -43,7 +48,8 @@ Ventajas y Desventajas de la Memoria Distribuida:
 •	Desventajas:
 •	Complejidad en la programación.
 •	Latencia de comunicación entre nodos.
-3. Arquitecturas Paralelas Híbridas
+
+5. Arquitecturas Paralelas Híbridas
 Las arquitecturas híbridas combinan elementos de arquitecturas de memoria compartida y distribuida para aprovechar las ventajas de ambas y mitigar sus desventajas.
 Ejemplo de Arquitectura Híbrida:
 •	Clúster de Nodos NUMA:
@@ -85,8 +91,7 @@ Técnicas de Computación Paralela y Distribuida
 •	Modelo híbrido: Combinación de MPI y OpenMP para aprovechar las ventajas de ambos en sistemas NUMA o clústeres heterogéneos.
 
 
-
-##Memoria Caché##
+**Memoria Caché**
 Definición y Importancia
 La memoria caché es una memoria de alta velocidad que almacena temporalmente los datos más utilizados, mejorando significativamente el rendimiento del sistema al reducir el tiempo de acceso a los datos. Es esencial en la arquitectura de los sistemas modernos, especialmente en la programación paralela y distribuida, donde una gestión eficiente de la caché es crucial para maximizar el rendimiento y minimizar la latencia.
 Tamaños de Caché L1, L2, L3
@@ -118,26 +123,32 @@ Gestión de Caché en Programación Paralela y Distribuida
 4.	Prefetching: Cargar datos en la caché antes de que sean necesitados.
 5.	Particionado de Caché: Dividir la caché en segmentos asignados a diferentes núcleos o procesos.
 6.	Optimización de Algoritmos: Adaptar los algoritmos para ser más "cache-friendly".
+   
 Coherencia de Caché
-Concepto
-La coherencia de caché asegura que todas las copias de una misma ubicación de memoria, almacenadas en las cachés de distintos procesadores, mantengan valores consistentes.
+La coherencia de caché asegura que todas las copias de una misma ubicación de memoria, almacenadas en las cachés de distintos procesadores, mantengan valores consistente
+
 Protocolos de Coherencia
+
 1.	MESI (Modified, Exclusive, Shared, Invalid):
 •	Modificado: Línea de caché ha sido alterada y no es coherente con la memoria principal.
 •	Exclusivo: Línea de caché es la única copia y es coherente con la memoria principal.
 •	Compartido: Línea de caché puede estar en múltiples cachés y es coherente con la memoria principal.
 •	Inválido: Línea de caché no es válida.
-2.	MOESI (Modified, Owner, Exclusive, Shared, Invalid):
+
+3.	MOESI (Modified, Owner, Exclusive, Shared, Invalid):
 •	Introduce el estado Owned: Una copia modificada que puede ser compartida.
-3.	MSI (Modified, Shared, Invalid): Versión simplificada de MESI.
+
+5.	MSI (Modified, Shared, Invalid): Versión simplificada de MESI.
 Mecanismos de Consistencia
 1.	Snooping: Todas las cachés observan el bus para detectar operaciones relevantes.
 2.	Directorios: Mantienen un registro del estado de cada línea de caché en todas las cachés del sistema.
+   
 Consistencia de Caché
 Modelos de Consistencia
 1.	Consistencia Secuencial: Operaciones de memoria se ven en el orden en que se ejecutaron.
 2.	Consistencia Débil: Operaciones de memoria pueden ejecutarse en cualquier orden, con sincronización en puntos específicos.
 3.	Consistencia de Memoria Liberada: Operaciones de lectura y escritura pueden realizarse en cualquier orden, pero las operaciones de sincronización deben ejecutarse en un orden específico.
+   
 Desafíos en Sistemas Distribuidos
 •	Latencia de Red: Mayor latencia en la comunicación entre nodos distribuidos.
 •	Cachés Distribuidas: Replicación de datos para mejorar el rendimiento y disponibilidad.
