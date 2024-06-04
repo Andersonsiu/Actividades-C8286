@@ -44,57 +44,59 @@ Tipos de Arquitecturas de Memoria Distribuida:
 •	Desventajas: Dependencia de la red para la comunicación, lo que puede introducir latencias significativas.
 
 Ventajas y Desventajas de la Memoria Distribuida:
-•	Ventajas:
-•	Escalabilidad.
-•	Tolerancia a fallos.
-•	Flexibilidad para integrar diferentes tipos de hardware.
-•	Desventajas:
-•	Complejidad en la programación.
-•	Latencia de comunicación entre nodos.
+**Ventajas:**
+- Escalabilidad.
+- Tolerancia a fallos.
+- Flexibilidad para integrar diferentes tipos de hardware.
+**Desventajas:**
+- Complejidad en la programación.
+- Latencia de comunicación entre nodos.
 
 5. Arquitecturas Paralelas Híbridas
 Las arquitecturas híbridas combinan elementos de arquitecturas de memoria compartida y distribuida para aprovechar las ventajas de ambas y mitigar sus desventajas.
 
 Ventajas de las Arquitecturas Híbridas:
-•	Escalabilidad mejorada.
-•	Flexibilidad para una amplia variedad de aplicaciones.
-•	Rendimiento mejorado gracias al acceso rápido a la memoria local.
-•	Tolerancia a fallos.
+- Escalabilidad mejorada.
+- Flexibilidad para una amplia variedad de aplicaciones.
+- Rendimiento mejorado gracias al acceso rápido a la memoria local.
+- Tolerancia a fallos.
 
 Desventajas de las Arquitecturas Híbridas:
-•	Complejidad de programación.
-•	Latencia de comunicación entre nodos.
-•	Costos elevados debido a hardware y redes sofisticadas.
+- Complejidad de programación.
+- Latencia de comunicación entre nodos.
+- Costos elevados debido a hardware y redes sofisticadas.
 
 Modelos de Programación en Arquitecturas Híbridas:
-•	MPI+OpenMP: Combinación de paso de mensajes y memoria compartida.
-•	UPC (Unified Parallel C): Modelo que extiende C para incluir memoria compartida y distribuida.
-•	GASNet (Global Address Space Networking): API para modelos de programación con espacio de direcciones global.
+- MPI+OpenMP: Combinación de paso de mensajes y memoria compartida.
+- UPC (Unified Parallel C): Modelo que extiende C para incluir memoria compartida y distribuida.
+- GASNet (Global Address Space Networking): API para modelos de programación con espacio de direcciones global.
 
 Aplicaciones Adecuadas
 
 Memoria Compartida:
-•	Alta interactividad entre procesos.
-•	Facilidad de programación.
-•	Necesidad crítica de coherencia de caché y sincronización.
-•	Memoria Distribuida:
-•	Alta escalabilidad (simulaciones científicas, análisis de big data).
-•	Tolerancia a fallos.
-•	Aplicaciones que pueden tolerar latencias de comunicación más altas.
+- Alta interactividad entre procesos.
+- Facilidad de programación.
+- Necesidad crítica de coherencia de caché y sincronización.
+  
+Memoria Distribuida:
+- Alta escalabilidad (simulaciones científicas, análisis de big data).
+- Tolerancia a fallos.
+- Aplicaciones que pueden tolerar latencias de comunicación más altas.
 
 Ejemplo de Clúster HPC Híbrido
-•	Interconexión de alta velocidad: Red InfiniBand para baja latencia y alto ancho de banda.
-•	Gestión de memoria eficiente: Uso de memoria local para datos de acceso frecuente y memoria distribuida para otros datos.
-•	Soporte para diversos modelos de programación: Flexibilidad para desarrolladores.
-•	Escalabilidad y rendimiento: Capacidad de escalar a miles de nodos para aplicaciones de gran escala.
+-	Interconexión de alta velocidad: Red InfiniBand para baja latencia y alto ancho de banda.
+-	Gestión de memoria eficiente: Uso de memoria local para datos de acceso frecuente y memoria distribuida para otros datos.
+-	Soporte para diversos modelos de programación: Flexibilidad para desarrolladores.
+-	Escalabilidad y rendimiento: Capacidad de escalar a miles de nodos para aplicaciones de gran escala.
 
 Técnicas de Computación Paralela y Distribuida
-•	Paralelismo de Datos: Dividir grandes conjuntos de datos en partes más pequeñas para procesarlas simultáneamente.
-•	Paralelismo de Tareas: Dividir un programa en tareas o hilos que se ejecutan en paralelo.
-•	Modelos de Programación Paralela:
-•	Modelo de paso de mensajes (MPI): Utilizado en sistemas de memoria distribuida.
-•	Modelo de memoria compartida (OpenMP): Utilizado en sistemas de memoria compartida.
-•	Modelo híbrido: Combinación de MPI y OpenMP para aprovechar las ventajas de ambos en sistemas NUMA o clústeres heterogéneos.
+- Paralelismo de Datos: Dividir grandes conjuntos de datos en partes más pequeñas para procesarlas simultáneamente.
+- Paralelismo de Tareas: Dividir un programa en tareas o hilos que se ejecutan en paralelo.
+  
+Modelos de Programación Paralela:
+- Modelo de paso de mensajes (MPI): Utilizado en sistemas de memoria distribuida.
+- Modelo de memoria compartida (OpenMP): Utilizado en sistemas de memoria compartida.
+- Modelo híbrido: Combinación de MPI y OpenMP para aprovechar las ventajas de ambos en sistemas NUMA o clústeres heterogéneos.
 
 **Memoria Caché**
 
