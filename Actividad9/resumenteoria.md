@@ -30,16 +30,19 @@ Ventajas y Desventajas de la Memoria Compartida:
 En una arquitectura de memoria distribuida, cada procesador tiene su propia memoria local y la comunicación entre procesadores se realiza mediante el paso de mensajes.
 
 Tipos de Arquitecturas de Memoria Distribuida:
+
 •	Multicomputadores:
 •	Sistemas compuestos por varios nodos de computación, cada uno con su propia CPU y memoria, interconectados mediante una red de alta velocidad.
 •	Ejemplos: Supercomputadoras, clústeres de computadoras.
 •	Ventajas: Alta escalabilidad y mejor tolerancia a fallos.
 •	Desventajas: Programación más compleja debido a la gestión de la comunicación y sincronización entre nodos.
+
 •	Clústeres de Computadoras:
 •	Varios sistemas completos (nodos) conectados a través de una red para trabajar juntos como un solo sistema.
 •	Ejemplos: Clústeres de alto rendimiento (HPC), clústeres de alta disponibilidad (HA).
 •	Ventajas: Coste-efectividad y capacidad de combinar recursos de diferentes sistemas.
 •	Desventajas: Dependencia de la red para la comunicación, lo que puede introducir latencias significativas.
+
 Ventajas y Desventajas de la Memoria Distribuida:
 •	Ventajas:
 •	Escalabilidad.
@@ -51,25 +54,31 @@ Ventajas y Desventajas de la Memoria Distribuida:
 
 5. Arquitecturas Paralelas Híbridas
 Las arquitecturas híbridas combinan elementos de arquitecturas de memoria compartida y distribuida para aprovechar las ventajas de ambas y mitigar sus desventajas.
+
 Ejemplo de Arquitectura Híbrida:
 •	Clúster de Nodos NUMA:
 •	Cada nodo es un sistema NUMA con múltiples procesadores y memoria local.
 •	Los nodos están conectados a través de una red de alta velocidad, formando un sistema de memoria distribuida.
+
 Ventajas de las Arquitecturas Híbridas:
 •	Escalabilidad mejorada.
 •	Flexibilidad para una amplia variedad de aplicaciones.
 •	Rendimiento mejorado gracias al acceso rápido a la memoria local.
 •	Tolerancia a fallos.
+
 Desventajas de las Arquitecturas Híbridas:
 •	Complejidad de programación.
 •	Latencia de comunicación entre nodos.
 •	Costos elevados debido a hardware y redes sofisticadas.
+
 Modelos de Programación en Arquitecturas Híbridas:
 •	MPI+OpenMP: Combinación de paso de mensajes y memoria compartida.
 •	UPC (Unified Parallel C): Modelo que extiende C para incluir memoria compartida y distribuida.
 •	GASNet (Global Address Space Networking): API para modelos de programación con espacio de direcciones global.
+
 Aplicaciones Adecuadas
-•	Memoria Compartida:
+
+Memoria Compartida:
 •	Alta interactividad entre procesos.
 •	Facilidad de programación.
 •	Necesidad crítica de coherencia de caché y sincronización.
@@ -77,11 +86,13 @@ Aplicaciones Adecuadas
 •	Alta escalabilidad (simulaciones científicas, análisis de big data).
 •	Tolerancia a fallos.
 •	Aplicaciones que pueden tolerar latencias de comunicación más altas.
+
 Ejemplo de Clúster HPC Híbrido
 •	Interconexión de alta velocidad: Red InfiniBand para baja latencia y alto ancho de banda.
 •	Gestión de memoria eficiente: Uso de memoria local para datos de acceso frecuente y memoria distribuida para otros datos.
 •	Soporte para diversos modelos de programación: Flexibilidad para desarrolladores.
 •	Escalabilidad y rendimiento: Capacidad de escalar a miles de nodos para aplicaciones de gran escala.
+
 Técnicas de Computación Paralela y Distribuida
 •	Paralelismo de Datos: Dividir grandes conjuntos de datos en partes más pequeñas para procesarlas simultáneamente.
 •	Paralelismo de Tareas: Dividir un programa en tareas o hilos que se ejecutan en paralelo.
@@ -90,32 +101,38 @@ Técnicas de Computación Paralela y Distribuida
 •	Modelo de memoria compartida (OpenMP): Utilizado en sistemas de memoria compartida.
 •	Modelo híbrido: Combinación de MPI y OpenMP para aprovechar las ventajas de ambos en sistemas NUMA o clústeres heterogéneos.
 
-
 **Memoria Caché**
-Definición y Importancia
+
 La memoria caché es una memoria de alta velocidad que almacena temporalmente los datos más utilizados, mejorando significativamente el rendimiento del sistema al reducir el tiempo de acceso a los datos. Es esencial en la arquitectura de los sistemas modernos, especialmente en la programación paralela y distribuida, donde una gestión eficiente de la caché es crucial para maximizar el rendimiento y minimizar la latencia.
+
 Tamaños de Caché L1, L2, L3
+
 1.	Caché L1:
 •	Ubicación: Más cercana al núcleo del procesador.
 •	División: Caché de instrucciones (L1i) y caché de datos (L1d).
 •	Tamaño: 32KB a 64KB por núcleo.
 •	Latencia: Muy baja, unos pocos ciclos de reloj.
-2.	Caché L2:
+
+3.	Caché L2:
 •	Ubicación: Más grande y ligeramente más lenta que L1.
 •	Configuración: Cada núcleo puede tener su propia caché L2 o compartirla.
 •	Tamaño: 256KB a 512KB por núcleo.
 •	Latencia: Generalmente entre 10 y 20 ciclos de reloj.
-3.	Caché L3:
+
+5.	Caché L3:
 •	Ubicación: Compartida entre todos los núcleos de un procesador.
 •	Tamaño: 2MB a 32MB o más.
 •	Latencia: Entre 30 y 50 ciclos de reloj.
+
 Políticas de Reemplazo de Caché
 1.	Least Recently Used (LRU): Reemplaza el bloque que no ha sido usado por más tiempo.
 2.	First In, First Out (FIFO): Reemplaza el bloque más antiguo.
 3.	Least Frequently Used (LFU): Reemplaza el bloque usado con menor frecuencia.
 4.	Random Replacement: Reemplaza un bloque al azar.
+   
 Latencia de Caché
 La latencia de la caché es el tiempo que tarda el procesador en acceder a los datos almacenados en ella. La baja latencia de la caché L1 permite operaciones rápidas, mientras que las cachés L2 y L3 tienen latencias mayores, afectando el rendimiento si los datos no están presentes en las cachés de nivel superior.
+
 Gestión de Caché en Programación Paralela y Distribuida
 1.	Localidad de Referencia: Optimizar los algoritmos para mejorar la localidad temporal y espacial.
 2.	Afinidad de Núcleo: Asignar tareas a núcleos específicos y mantener la afinidad de los datos a esos núcleos.
