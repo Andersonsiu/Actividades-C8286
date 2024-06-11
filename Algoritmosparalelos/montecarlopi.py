@@ -32,7 +32,7 @@ if __name__ == "__main__":
     num_processes = 4
 
     start_time = time.time()
-    #calcula n usando paralallel
+    # calcula Pi usando paralelo
     pi_estimate = parallel_monte_carlo_pi(total_samples, num_processes)
     end_time = time.time()
 
