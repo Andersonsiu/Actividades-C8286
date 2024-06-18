@@ -33,4 +33,5 @@ req.Wait()  # Esperar a que la operación de gather se complete
 # Proceso raíz realiza reducción colectiva para calcular la media
 if rank == 0:
     mean_value = np.mean(gathered_data)  # Calcular la media de los datos recopilados
-    print(f"Media de los cuadrados: {mean_value}")  # Imprimir el resultado
+    print(f"Media de los cuadrados: {mean_value}") 
+
