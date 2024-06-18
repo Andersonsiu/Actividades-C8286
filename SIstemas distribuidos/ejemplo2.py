@@ -1,3 +1,7 @@
+
+#Este ejemplo en Python utiliza MPI para realizar una operación de scatter y gather no bloqueante, seguido de una reducción colectiva para calcular
+#la media de los elementos distribuidos en un grupo de procesos.
+
 from mpi4py import MPI  
 import numpy as np  
 
