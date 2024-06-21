@@ -37,3 +37,4 @@ interacciones_data = interacciones_df.to_dict(orient='records')
 db.interacciones.insert_many(interacciones_data)
 
 print("Datos insertados correctamente")
+

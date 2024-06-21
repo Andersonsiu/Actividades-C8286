@@ -1,0 +1,121 @@
+interaccion_id,user_id,producto_id,tipo_interaccion,fecha,detalle_interaccion
+interaccion_0,user_0,producto_0,compra,2023-01-01,{'cantidad': 1}
+interaccion_1,user_1,producto_1,click,2023-01-02,{}
+interaccion_2,user_2,producto_2,compra,2023-01-03,{'cantidad': 1}
+interaccion_3,user_3,producto_3,review,2023-01-04,{'comentario': 'Excelente libro'}
+interaccion_4,user_4,producto_4,compra,2023-01-05,{'cantidad': 1}
+interaccion_5,user_5,producto_5,click,2023-01-06,{}
+interaccion_6,user_6,producto_6,compra,2023-01-07,{'cantidad': 1}
+interaccion_7,user_7,producto_7,review,2023-01-08,{'comentario': 'Muy buena calidad'}
+interaccion_8,user_8,producto_8,compra,2023-01-09,{'cantidad': 1}
+interaccion_9,user_9,producto_9,click,2023-01-10,{}
+interaccion_10,user_10,producto_10,compra,2023-01-11,{'cantidad': 1}
+interaccion_11,user_11,producto_11,click,2023-01-12,{}
+interaccion_12,user_12,producto_12,compra,2023-01-13,{'cantidad': 1}
+interaccion_13,user_13,producto_13,review,2023-01-14,{'comentario': 'Excelente producto'}
+interaccion_14,user_14,producto_14,compra,2023-01-15,{'cantidad': 1}
+interaccion_15,user_15,producto_15,click,2023-01-16,{}
+interaccion_16,user_16,producto_16,compra,2023-01-17,{'cantidad': 1}
+interaccion_17,user_17,producto_17,review,2023-01-18,{'comentario': 'Muy buena cámara'}
+interaccion_18,user_18,producto_18,compra,2023-01-19,{'cantidad': 1}
+interaccion_19,user_19,producto_19,click,2023-01-20,{}
+interaccion_20,user_104,producto_17,review,2023-07-17,{}
+interaccion_21,user_30,producto_31,compra,2024-06-13,{}
+interaccion_22,user_33,producto_54,click,2024-05-30,{}
+interaccion_23,user_34,producto_68,review,2023-12-14,{}
+interaccion_24,user_105,producto_89,review,2024-02-05,{}
+interaccion_25,user_108,producto_116,click,2023-12-18,{}
+interaccion_26,user_36,producto_98,compra,2024-04-12,{}
+interaccion_27,user_63,producto_15,click,2024-01-15,{}
+interaccion_28,user_88,producto_42,review,2024-03-06,{}
+interaccion_29,user_40,producto_47,compra,2023-10-29,{}
+interaccion_30,user_110,producto_48,click,2024-04-29,{}
+interaccion_31,user_94,producto_7,review,2024-02-14,{}
+interaccion_32,user_86,producto_73,review,2023-07-23,{}
+interaccion_33,user_6,producto_45,click,2023-09-04,{}
+interaccion_34,user_38,producto_16,review,2024-02-25,{}
+interaccion_35,user_88,producto_70,click,2023-07-05,{}
+interaccion_36,user_13,producto_113,compra,2023-12-10,{}
+interaccion_37,user_72,producto_47,click,2024-05-26,{}
+interaccion_38,user_64,producto_5,review,2024-05-01,{}
+interaccion_39,user_32,producto_41,click,2023-06-18,{}
+interaccion_40,user_47,producto_49,click,2023-11-04,{}
+interaccion_41,user_59,producto_88,review,2024-04-08,{}
+interaccion_42,user_110,producto_29,compra,2023-06-28,{}
+interaccion_43,user_73,producto_36,click,2023-09-24,{}
+interaccion_44,user_27,producto_35,review,2023-09-29,{}
+interaccion_45,user_76,producto_34,compra,2024-03-25,{}
+interaccion_46,user_81,producto_9,click,2023-12-08,{}
+interaccion_47,user_109,producto_115,click,2024-05-16,{}
+interaccion_48,user_64,producto_66,review,2024-04-12,{}
+interaccion_49,user_62,producto_114,review,2024-04-12,{}
+interaccion_50,user_118,producto_58,compra,2023-11-16,{}
+interaccion_51,user_14,producto_56,compra,2023-12-29,{}
+interaccion_52,user_58,producto_85,compra,2024-02-24,{}
+interaccion_53,user_28,producto_118,compra,2024-05-08,{}
+interaccion_54,user_101,producto_33,compra,2024-04-14,{}
+interaccion_55,user_73,producto_37,click,2023-08-22,{}
+interaccion_56,user_14,producto_44,compra,2023-12-25,{}
+interaccion_57,user_8,producto_117,review,2023-09-22,{}
+interaccion_58,user_98,producto_49,review,2024-05-31,{}
+interaccion_59,user_11,producto_102,click,2023-08-29,{}
+interaccion_60,user_85,producto_76,review,2024-04-09,{}
+interaccion_61,user_3,producto_30,click,2024-02-12,{}
+interaccion_62,user_117,producto_89,compra,2023-07-23,{}
+interaccion_63,user_1,producto_84,review,2023-09-12,{}
+interaccion_64,user_104,producto_111,click,2023-12-02,{}
+interaccion_65,user_25,producto_11,click,2023-07-12,{}
+interaccion_66,user_12,producto_108,click,2023-07-18,{}
+interaccion_67,user_77,producto_28,review,2023-08-10,{}
+interaccion_68,user_99,producto_77,review,2023-10-09,{}
+interaccion_69,user_15,producto_23,compra,2023-09-26,{}
+interaccion_70,user_6,producto_43,compra,2023-07-28,{}
+interaccion_71,user_104,producto_105,compra,2024-02-18,{}
+interaccion_72,user_113,producto_65,review,2023-11-08,{}
+interaccion_73,user_5,producto_82,compra,2024-05-30,{}
+interaccion_74,user_51,producto_40,review,2024-03-30,{}
+interaccion_75,user_64,producto_118,review,2024-01-21,{}
+interaccion_76,user_75,producto_108,click,2023-10-07,{}
+interaccion_77,user_113,producto_46,compra,2024-04-12,{}
+interaccion_78,user_2,producto_18,compra,2024-05-29,{}
+interaccion_79,user_88,producto_81,click,2023-07-18,{}
+interaccion_80,user_20,producto_61,compra,2023-08-29,{}
+interaccion_81,user_39,producto_4,review,2023-09-10,{}
+interaccion_82,user_93,producto_28,review,2024-06-16,{}
+interaccion_83,user_23,producto_80,review,2024-01-30,{}
+interaccion_84,user_112,producto_11,compra,2023-10-08,{}
+interaccion_85,user_30,producto_23,review,2024-02-03,{}
+interaccion_86,user_48,producto_52,click,2024-05-07,{}
+interaccion_87,user_3,producto_98,click,2023-07-01,{}
+interaccion_88,user_20,producto_80,compra,2023-10-28,{}
+interaccion_89,user_25,producto_112,compra,2023-06-26,{}
+interaccion_90,user_94,producto_103,click,2023-11-19,{}
+interaccion_91,user_80,producto_30,review,2023-12-27,{}
+interaccion_92,user_65,producto_40,review,2023-06-18,{}
+interaccion_93,user_84,producto_45,click,2024-06-02,{}
+interaccion_94,user_30,producto_14,compra,2024-05-06,{}
+interaccion_95,user_98,producto_24,review,2023-07-23,{}
+interaccion_96,user_71,producto_35,click,2023-09-06,{}
+interaccion_97,user_63,producto_20,click,2023-11-11,{}
+interaccion_98,user_68,producto_20,compra,2024-01-15,{}
+interaccion_99,user_52,producto_91,review,2023-06-29,{}
+interaccion_100,user_28,producto_95,review,2024-01-30,{}
+interaccion_101,user_74,producto_30,click,2024-04-15,{}
+interaccion_102,user_115,producto_23,compra,2023-06-25,{}
+interaccion_103,user_23,producto_39,click,2024-03-23,{}
+interaccion_104,user_25,producto_37,click,2023-07-05,{}
+interaccion_105,user_97,producto_1,click,2023-07-09,{}
+interaccion_106,user_43,producto_5,compra,2023-10-02,{}
+interaccion_107,user_80,producto_48,review,2024-04-17,{}
+interaccion_108,user_112,producto_66,compra,2024-03-10,{}
+interaccion_109,user_76,producto_54,review,2024-06-05,{}
+interaccion_110,user_111,producto_33,click,2024-06-08,{}
+interaccion_111,user_56,producto_23,compra,2023-07-11,{}
+interaccion_112,user_63,producto_50,click,2024-05-27,{}
+interaccion_113,user_62,producto_56,click,2023-08-26,{}
+interaccion_114,user_13,producto_54,compra,2023-09-01,{}
+interaccion_115,user_94,producto_55,compra,2023-11-03,{}
+interaccion_116,user_85,producto_18,click,2023-09-02,{}
+interaccion_117,user_25,producto_77,compra,2023-11-23,{}
+interaccion_118,user_1,producto_14,review,2024-04-11,{}
+interaccion_119,user_67,producto_95,click,2023-07-24,{}
