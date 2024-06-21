@@ -1,0 +1,21 @@
+interaccion_id,user_id,producto_id,tipo_interaccion,fecha,detalle_interaccion
+interaccion_0,user_0,producto_0,compra,2023-01-01,{'cantidad': 1}
+interaccion_1,user_1,producto_1,click,2023-01-02,{}
+interaccion_2,user_2,producto_2,compra,2023-01-03,{'cantidad': 1}
+interaccion_3,user_3,producto_3,review,2023-01-04,{'comentario': 'Excelente libro'}
+interaccion_4,user_4,producto_4,compra,2023-01-05,{'cantidad': 1}
+interaccion_5,user_5,producto_5,click,2023-01-06,{}
+interaccion_6,user_6,producto_6,compra,2023-01-07,{'cantidad': 1}
+interaccion_7,user_7,producto_7,review,2023-01-08,{'comentario': 'Muy buena calidad'}
+interaccion_8,user_8,producto_8,compra,2023-01-09,{'cantidad': 1}
+interaccion_9,user_9,producto_9,click,2023-01-10,{}
+interaccion_10,user_10,producto_10,compra,2023-01-11,{'cantidad': 1}
+interaccion_11,user_11,producto_11,click,2023-01-12,{}
+interaccion_12,user_12,producto_12,compra,2023-01-13,{'cantidad': 1}
+interaccion_13,user_13,producto_13,review,2023-01-14,{'comentario': 'Excelente producto'}
+interaccion_14,user_14,producto_14,compra,2023-01-15,{'cantidad': 1}
+interaccion_15,user_15,producto_15,click,2023-01-16,{}
+interaccion_16,user_16,producto_16,compra,2023-01-17,{'cantidad': 1}
+interaccion_17,user_17,producto_17,review,2023-01-18,{'comentario': 'Muy buena cámara'}
+interaccion_18,user_18,producto_18,compra,2023-01-19,{'cantidad': 1}
+interaccion_19,user_19,producto_19,click,2023-01-20,{}
