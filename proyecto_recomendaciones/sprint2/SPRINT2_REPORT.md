@@ -127,7 +127,10 @@ En las imágenes se muestra la estructura de la base de datos MongoDB utilizada 
 
 - usuarios: Contiene información sobre los usuarios. Hay 100 documentos en esta colección.
 
-<![if !vml]>![Imagen cargada](file:///C:/Users/Primo/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)<![endif]>  
+
+
+![image.png](https://i.postimg.cc/rFhXYRQ2/image.png)
+
 
 
 **Detalle de la Colección recomendaciones_usuario**
@@ -146,7 +149,8 @@ En la colección recomendaciones_usuario, se almacena la siguiente información 
 
 
 
-![image.png](https://i.postimg.cc/rFhXYRQ2/image.png)
+![image.png](https://i.postimg.cc/W39wPVKz/image.png)
+
 
 
 
@@ -157,9 +161,6 @@ Las imágenes muestran que se han implementado y almacenado correctamente las re
 -   **Recomendaciones basadas en clusters:** Utilizando técnicas de clustering, se agrupan usuarios y se generan recomendaciones basadas en las interacciones dentro de cada cluster.
 -   **Recomendaciones híbridas:** Combina los enfoques anteriores para proporcionar una recomendación más robusta y precisa.
 
-
-
-![image.png](https://i.postimg.cc/W39wPVKz/image.png)
 
 
 
