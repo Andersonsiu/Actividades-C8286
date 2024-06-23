@@ -81,9 +81,6 @@ Se integraron los algoritmos de recomendación con MongoDB para obtener datos de
 - **Recomendaciones Basadas en Clusters**: Productos recomendados basándose en la popularidad dentro del cluster del usuario. Los productos recomendados son ['producto_5', 'producto_1', 'producto_28', 'producto_40', 'producto_32'].
 
 
-- **Recomendaciones Híbridas**: Combina los enfoques anteriores para proporcionar recomendaciones equilibradas. Los productos recomendados son ['producto_27', 'producto_32', 'producto_10', 'producto_28', 'producto_43'].
-
-
 - **Resultados de Evaluación**: La evaluación conjunta muestra que el filtrado colaborativo basado en usuarios y el enfoque híbrido proporcionan el mejor equilibrio entre precisión y cobertura. El filtrado basado en ítems y clustering tienen un rendimiento ligeramente inferior en términos de recall y F1-score, pero aún así son útiles como métodos complementarios.
 
 
