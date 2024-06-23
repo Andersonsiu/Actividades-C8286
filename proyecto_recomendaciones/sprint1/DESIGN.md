@@ -61,15 +61,12 @@ El sistema utiliza cuatro colecciones principales en MongoDB:
    - Almacena los datos de usuarios, productos, interacciones y recomendaciones generadas.
    - Optimizada con índices para mejorar el rendimiento de las consultas.
 
-3. **Scripts y Notebooks**:
-   - **Población de la Base de Datos (`populate_db.py`)**: Inserta datos de ejemplo en MongoDB.
+3. **Scripts**:
    - **Filtrado Colaborativo (`filtrado_colaborativo.py`)**: Implementa y evalúa el sistema de recomendación basado en usuarios e ítems.
    - **Clustering (`clustering.py`)**: Implementa y evalúa el sistema de recomendación basado en clustering.
-   - **Notebooks de Jupyter**: Proporcionan una interfaz interactiva para visualizar los resultados y gráficos generados.
+   - **Integracion (`integracion.py`)**: Implementa y evalúa el sistema de recomendación basado en clustering.
 
-### Diagrama de Flujo
 
-![Diagrama de Flujo del Sistema](../images/system_flowchart.png)
 
 ## Optimización y Escalabilidad
 
