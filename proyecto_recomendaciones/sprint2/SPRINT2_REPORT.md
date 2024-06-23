@@ -38,9 +38,6 @@ Se implementó un algoritmo de filtrado colaborativo basado en la similitud entr
 	- **Recomendaciones Basadas en Ítems**: Se muestran los productos recomendados para el usuario 'user_1' basándose en la similitud con otros productos que el usuario ha interactuado. Los productos recomendados son ['producto_1', 'producto_9', 'producto_35', 'producto_12', 'producto_33'].
 
 
-	- **Recomendaciones Híbridas**: Combina las recomendaciones basadas en usuarios e ítems, promediando las puntuaciones y seleccionando los mejores productos. Los productos recomendados son ['producto_27', 'producto_32', 'producto_10', 'producto_28', 'producto_43'].
-
-
 	- **Resultados de Evaluación**: Las métricas de evaluación indican que las recomendaciones son precisas (precisión de 1.0), pero la cobertura (recall) y el equilibrio entre precisión y recall (F1-Score) son más bajos, indicando áreas de mejora en términos de cobertura de las recomendaciones.
 
 # Clustering de Usuarios 
