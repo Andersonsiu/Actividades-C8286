@@ -4,11 +4,6 @@
 
 Este documento detalla el diseño y la arquitectura del sistema de recomendación desarrollado en el Proyecto 5. El objetivo del sistema es ofrecer recomendaciones personalizadas a los usuarios utilizando una base de datos NoSQL (MongoDB) y técnicas avanzadas de filtrado colaborativo y clustering.
 
-## Objetivos del Diseño
-
-- **Escalabilidad**: La arquitectura debe soportar un crecimiento en el número de usuarios y productos sin afectar el rendimiento.
-- **Flexibilidad**: La estructura de la base de datos debe permitir la fácil adición de nuevos tipos de datos y relaciones.
-- **Eficiencia**: Optimizar las consultas y el procesamiento de datos para proporcionar recomendaciones en tiempo real.
 
 ## Estructura de la Base de Datos
 
