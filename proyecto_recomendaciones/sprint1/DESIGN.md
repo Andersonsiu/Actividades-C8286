@@ -45,9 +45,6 @@ El sistema utiliza cuatro colecciones principales en MongoDB:
    - **Índices**:
      - Índice en `user_id` para búsquedas rápidas.
 
-### Esquema de la Base de Datos
-
-![Esquema de la Base de Datos](../images/database_schema.png)
 
 ## Arquitectura del Sistema
 
