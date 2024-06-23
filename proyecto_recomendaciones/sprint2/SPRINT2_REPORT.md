@@ -151,7 +151,6 @@ Las imágenes muestran que se han implementado y almacenado correctamente las re
 -   **Recomendaciones basadas en usuarios:** Basadas en la similitud entre usuarios, se recomienda productos que otros usuarios similares han consumido.
 -   **Recomendaciones basadas en ítems:** Basadas en la similitud entre productos, se recomienda productos similares a los que el usuario ya ha consumido.
 -   **Recomendaciones basadas en clusters:** Utilizando técnicas de clustering, se agrupan usuarios y se generan recomendaciones basadas en las interacciones dentro de cada cluster.
--   **Recomendaciones híbridas:** Combina los enfoques anteriores para proporcionar una recomendación más robusta y precisa.
 
 
 
