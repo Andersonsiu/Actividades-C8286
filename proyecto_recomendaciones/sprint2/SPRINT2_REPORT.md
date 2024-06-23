@@ -24,11 +24,6 @@ Se implementó un algoritmo de filtrado colaborativo basado en la similitud entr
 Se implementó un algoritmo de filtrado colaborativo basado en la similitud entre ítems para recomendar productos. Este algoritmo calcula la similitud del coseno entre los productos basándose en las interacciones de los usuarios y recomienda productos que son similares a los que el usuario ya ha consumido.
 
 
-- **Filtrado Colaborativo Híbrido**
-
-Se desarrolló un enfoque híbrido que combina tanto el filtrado colaborativo basado en usuarios como el basado en ítems. Este enfoque promedia las puntuaciones de las recomendaciones obtenidas de ambos métodos para generar una lista final de productos recomendados, aprovechando las ventajas de cada técnica.
-
-
 
 ![image.png](https://i.postimg.cc/ry0rp5RQ/image.png)
 
