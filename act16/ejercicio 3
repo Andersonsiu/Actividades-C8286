@@ -1,0 +1,197 @@
+import threading
+import time
+from collections import defaultdict
+
+# Algoritmo de Dijkstra-Scholten para la Detección de Terminación
+class DijkstraScholtenProcess:
+    def __init__(self, process_id):
+        self.process_id = process_id  # Identificador del proceso
+        self.parent = None  # Proceso padre en el árbol de dependencia
+        self.children = set()  # Conjunto de procesos hijos
+        self.active = True  # Estado activo del proceso
+        self.lock = threading.Lock()  # Bloqueo para operaciones atómicas
+
+    def send_message(self, recipient):
+        print(f"Process {self.process_id} sends message to Process {recipient.process_id}")
+        recipient.receive_message(self)  # Envía un mensaje a otro proceso
+
+    def receive_message(self, sender):
+        with self.lock:
+            if self.parent is None:
+                self.parent = sender  # Establece el proceso padre si no está definido
+            self.children.add(sender.process_id)  # Agrega el proceso remitente como hijo
+            self.process_task()  # Procesa la tarea simulada
+
+    def process_task(self):
+        # Simula la ejecución de una tarea
+        self.active = False  # Marca el proceso como inactivo después de la tarea
+        self.check_termination()  # Verifica la terminación del proceso
+
+    def check_termination(self):
+        # Verifica si el proceso y sus hijos han terminado
+        if not self.active and not self.children:
+            if self.parent:
+                self.parent.receive_termination(self.process_id)  # Notifica al proceso padre
+            else:
+                print(f"Process {self.process_id} detects global termination")
+
+    def receive_termination(self, child_id):
+        with self.lock:
+            self.children.remove(child_id)  # Remueve el hijo terminado
+            self.check_termination()  # Verifica nuevamente la terminación
+
+# Algoritmo de Ricart-Agrawala para la Exclusión Mutua
+class RicartAgrawalaProcess:
+    def __init__(self, process_id, num_processes):
+        self.process_id = process_id  # Identificador del proceso
+        self.num_processes = num_processes  # Número total de procesos
+        self.clock = 0  # Reloj lógico del proceso
+        self.request_queue = []  # Cola de solicitudes
+        self.replies_received = 0  # Contador de respuestas recibidas
+        self.lock = threading.Lock()  # Bloqueo para operaciones atómicas
+
+
+#Un proceso que quiere acceder a la sección crítica incrementa su reloj lógico
+#y envía una solicitud a todos los demás procesos
+
+    def request_access(self):
+        with self.lock:
+            self.clock += 1  # Incrementa el reloj lógico
+            self.request_queue.append((self.clock, self.process_id))  # Añade la solicitud a la cola
+            for i in range(self.num_processes):
+                if i != self.process_id:
+                    self.send_request(i, self.clock, self.process_id)  # Envía solicitudes a los demás procesos
+
+    def send_request(self, target_id, timestamp, sender_id):
+        print(f"Process {self.process_id} sends request to Process {target_id} with timestamp {timestamp}")
+
+    def receive_request(self, timestamp, sender_id):
+        with self.lock:
+            self.clock = max(self.clock, timestamp) + 1  # Ajusta el reloj lógico
+            self.request_queue.append((timestamp, sender_id))  # Añade la solicitud recibida a la cola
+            self.request_queue.sort()  # Ordena la cola de solicitudes
+            self.send_reply(sender_id)  # Envía respuesta al solicitante
+
+    def send_reply(self, target_id): #renvia rpta a una solicitud de acceso
+        print(f"Process {self.process_id} sends reply to Process {target_id}")
+
+    def receive_reply(self, sender_id): #recibe una rpta y verifica si puede acceder
+        with self.lock:
+            self.replies_received += 1  # Incrementa el contador de respuestas recibidas
+            if self.replies_received == self.num_processes - 1:
+                self.enter_critical_section()  # Entra en la sección crítica
+
+    def enter_critical_section(self):
+        print(f"Process {self.process_id} entering critical section")
+        self.leave_critical_section()  # Sale de la sección crítica inmediatamente para esta demostración
+
+    def leave_critical_section(self):
+        with self.lock:
+            self.replies_received = 0  # Resetea el contador de respuestas recibidas
+            self.request_queue = [(t, n) for t, n in self.request_queue if n != self.process_id]  # Limpia la cola de solicitudes
+            for timestamp, process_id in self.request_queue:
+                self.send_reply(process_id)  # Envía respuestas a las solicitudes en espera
+        print(f"Process {self.process_id} leaving critical section")
+
+# Algoritmo de Intersección para la Sincronización de Relojes
+class IntersectionClockSync:
+    def __init__(self, node_id, time, uncertainty):
+        self.node_id = node_id  # Identificador del nodo
+        self.clock = time  # Reloj del nodo
+        self.uncertainty = uncertainty  # Incertidumbre del reloj
+
+    def get_time_interval(self):
+        # Devuelve el intervalo de tiempo del nodo
+        return (self.clock - self.uncertainty, self.clock + self.uncertainty)
+
+def synchronize_clocks(nodes): #calcular interesccion de intervalos de tiempo  de todos los nodos
+    intervals = [node.get_time_interval() for node in nodes]
+    max_start = max(interval[0] for interval in intervals)
+    min_end = min(interval[1] for interval in intervals)
+    if max_start <= min_end:
+        synchronized_time = (max_start + min_end) / 2  # Calcula el tiempo sincronizado
+        for node in nodes:
+            node.clock = synchronized_time  # Ajusta el reloj de cada nodo
+        return synchronized_time
+    else:
+        return None  # Devuelve None si no hay intersección
+
+# Algoritmo de Cheney para la Recolección de Basura
+class CheneyCollector:
+    def __init__(self, size):
+        self.size = size  # Tamaño del espacio de memoria
+        self.from_space = [None] * size  # Espacio activo
+        self.to_space = [None] * size  # Espacio inactivo
+        self.free_ptr = 0  # Puntero libre
+
+    def allocate(self, obj):
+        if self.free_ptr >= self.size:
+            self.collect()  # Ejecuta la recolección de basura si no hay espacio suficiente
+        addr = self.free_ptr
+        self.from_space[addr] = obj  # Asigna el objeto en el espacio activo
+        self.free_ptr += 1
+        return addr
+
+    def collect(self):
+        self.to_space = [None] * self.size  # Resetea el espacio inactivo
+        self.free_ptr = 0  # Resetea el puntero libre
+        for obj in self.from_space:
+            if obj is not None:
+                self.copy(obj)  # Copia los objetos vivos al espacio inactivo
+        self.from_space, self.to_space = self.to_space, self.from_space  # Intercambia los espacios
+
+    def copy(self, obj):
+        addr = self.free_ptr
+        self.to_space[addr] = obj  # Copia el objeto al espacio inactivo
+        self.free_ptr += 1
+        return addr
+
+# Integrar los algoritmos en un sistema distribuido
+class DistributedSystem:
+    def __init__(self, num_processes):
+        self.num_processes = num_processes  # Número total de procesos
+        # Inicializa los procesos para Dijkstra-Scholten
+        self.dijkstra_processes = [DijkstraScholtenProcess(i) for i in range(num_processes)]
+        # Inicializa los procesos para Ricart-Agrawala
+        self.ricart_agrawala_processes = [RicartAgrawalaProcess(i, num_processes) for i in range(num_processes)]
+        # Inicializa los nodos para la sincronización de relojes
+        self.clock_sync_processes = [IntersectionClockSync(i, time, uncertainty) for i, (time, uncertainty) in enumerate([(10, 2), (12, 1), (14, 3)])]
+        # Inicializa el recolector de basura de Cheney
+        self.collector = CheneyCollector(10)
+
+    def run_dijkstra_scholten(self):
+        # Inicia la detección de terminación
+        initiator = self.dijkstra_processes[0]
+        initiator.send_message(self.dijkstra_processes[1])
+
+    def run_ricart_agrawala(self):
+        # Solicita acceso a la sección crítica
+        self.ricart_agrawala_processes[0].request_access()
+
+    def run_clock_sync(self):
+        # Sincroniza los relojes de todos los nodos
+        synchronized_time = synchronize_clocks(self.clock_sync_processes)
+        print(f"Synchronized time: {synchronized_time}")
+
+    def run_garbage_collection(self):
+        # Asigna memoria y ejecuta la recolección de basura
+        addr1 = self.collector.allocate("task1")
+        print(f"Allocated task1 at: {addr1}")
+        self.collector.collect()
+        print("Garbage collection complete")
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    system = DistributedSystem(3)
+    
+    # Ejecutar Dijkstra-Scholten
+    system.run_dijkstra_scholten()
+    
+    # Ejecutar Ricart-Agrawala
+    system.run_ricart_agrawala()
+    
+    # Sincronizar relojes
+    system.run_clock_sync()
+    
+    # Ejecutar recolección de basura
+    system.run_garbage_collection()
