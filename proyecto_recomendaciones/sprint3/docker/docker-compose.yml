@@ -1,0 +1,111 @@
+version: '3.8'
+
+services:
+  flask_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - app_network
+
+  mongodb:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+    command: ["mongod", "--bind_ip_all"]
+    networks:
+      - app_network
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - app_network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - app_network
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.9.3
+    ports:
+      - "5044:5044"
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./logstash:/usr/share/logstash/pipeline
+    networks:
+      - app_network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.9.3
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - app_network
+
+  locust:
+    build:
+      context: .
+      dockerfile: Dockerfile.locust
+    ports:
+      - "8089:8089"
+    depends_on:
+      - flask_app
+    networks:
+      - app_network
+    command: locust -f /app/locustfile.py --host=http://flask_app:5000
+
+  init_db:
+    build:
+      context: .
+      dockerfile: Dockerfile.init_db_integracion
+    depends_on:
+      - mongodb
+    networks:
+      - app_network
+    command: ["sh", "-c", "python bd.py && python poblacion_datos.py && python integracion.py"]
+    restart: "no"
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - app_network
+      
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+      - elasticsearch
+    networks:
+      - app_network   
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  mongodata:
+
