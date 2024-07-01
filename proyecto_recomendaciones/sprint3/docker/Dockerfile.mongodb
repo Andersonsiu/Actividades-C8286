@@ -1,0 +1,27 @@
+FROM mongo:4.4
+
+# Actualizar apt-get e instalar dependencias necesarias
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gnupg \
+    netcat && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Añadir la clave GPG de MongoDB de manera segura
+RUN curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+
+# Añadir el repositorio de MongoDB
+RUN echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+
+# Instalar MongoDB y limpiar
+RUN apt-get update && apt-get install -y mongodb-org && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Copiar los scripts de inicialización
+COPY init-mongo.sh /docker-entrypoint-initdb.d/
+
+# Asegurarse de que el script de inicialización tenga permisos de ejecución
+RUN chmod +x /docker-entrypoint-initdb.d/init-mongo.sh
+
+# Comando para ejecutar el script de inicialización
+ENTRYPOINT ["sh", "/docker-entrypoint-initdb.d/init-mongo.sh"]
+

@@ -1,0 +1,16 @@
+FROM python:3.8-slim
+
+# Establecer el directorio de trabajo
+WORKDIR /app
+
+# Copiar los scripts a la imagen
+COPY locust/requirements.txt /app/requirements.txt
+COPY locust /app
+COPY app/integracion.py /app/integracion.py
+
+# Instalar dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Ejecutar Locust
+CMD ["locust", "-f", "locustfile.py", "--host=http://flask_app:5000"]
+
