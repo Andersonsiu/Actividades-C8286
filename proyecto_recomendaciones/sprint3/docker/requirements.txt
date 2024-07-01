@@ -1,0 +1,11 @@
+Flask==2.1.2
+pandas==1.4.2
+pymongo==4.1.1
+scikit-learn==1.0.2
+prometheus-client==0.14.1
+prometheus-flask-exporter==0.18.1
+json-log-formatter==0.3.1
+werkzeug==2.0.3  
+locust
+redis==4.0.2
+
