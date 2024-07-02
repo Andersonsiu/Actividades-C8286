@@ -1,6 +1,6 @@
 ### Sprint 1: Diseño e Implementación Inicial del Sistema de Recomendación
 
-#### 1. Introducción
+### 1. Introducción
 
 **Objetivos del Sprint:**
 
@@ -8,7 +8,7 @@
 -   Configurar la base de datos MongoDB con colecciones e índices definidos.
 -   Insertar y validar los datos de usuarios, productos e interacciones en la base de datos.
 
-#### 2. Planificación
+### 2. Planificación
 
 **Tareas planificadas:**
 
@@ -21,7 +21,7 @@
 
 **Cronograma:** El cronograma detallado muestra las fechas de inicio y fin de cada tarea, así como los hitos importantes, como el diseño del esquema y la configuración de MongoDB.
 
-#### 3. Implementación
+### 3. Implementación
 
 **Descripción del trabajo realizado:** Se diseñó y documentó el esquema de la base de datos, se configuró MongoDB y se definieron las colecciones e índices. Además, se insertaron y validaron datos de ejemplo para asegurar el correcto funcionamiento de la base de datos.
 
@@ -31,7 +31,7 @@
 
 
 
-# Colección de Usuarios
+### Colección de Usuarios
 
 - **user_id**: String - Identificador único del usuario.
 - **nombre**: String - Nombre del usuario.
@@ -47,7 +47,7 @@
   - **fecha**: Date
   - **tipo_interaccion**: String
 
-# Colección de Productos
+### Colección de Productos
 
 - **producto_id**: String - Identificador único del producto.
 - **nombre**: String - Nombre del producto.
@@ -60,7 +60,7 @@
 - **disponibilidad**: Boolean - Disponibilidad del producto.
 - **especificaciones**: Object - Especificaciones adicionales del producto en formato clave-valor.
 
-# Colección de Interacciones
+### Colección de Interacciones
 
 - **interaccion_id**: String - Identificador único de la interacción.
 - **user_id**: String - Identificador del usuario que realizó la interacción (referencia a Usuarios).
@@ -69,7 +69,7 @@
 - **fecha**: Date - Fecha de la interacción.
 - **detalle_interaccion**: Object - Detalle adicional de la interacción en formato clave-valor (opcional).
 
-# Relaciones Lógicas
+### Relaciones Lógicas
 
 1. **Usuarios <--- user_id --- Interacciones**:
    - **user_id** en la colección Interacciones referencia a **user_id** en la colección Usuarios.
@@ -80,9 +80,9 @@
    - Esto indica que cada interacción está asociada a un producto específico.
 
 
-#### 4. Resultados
+## 4. Resultados
 
-# Base de Datos MongoDB Configurada**
+### Base de Datos MongoDB Configurada**
 
 **Pasos para Configurar MongoDB y Crear las Colecciones e Índices**:
 
@@ -98,7 +98,7 @@
 **Índice de Texto en nombre y descripcion (productos)**: Mejora búsquedas de productos por texto en nombre y descripción.
 
 
-# Datos de Ejemplo Insertados y Validados:
+### Datos de Ejemplo Insertados y Validados:
 
 ![image.png](https://i.postimg.cc/8C1shRnc/image.png)
 
@@ -111,15 +111,27 @@
 ![image.png](https://i.postimg.cc/nVQ7Vk8f/image.png)
 
 
-#### 5. Análisis y evaluación
+## 5. Análisis y evaluación
 
-# Validación de los Datos Insertados:
+### Validación de los Datos Insertados:
 
 
 ![image.png](https://i.postimg.cc/VvcNkXMz/image.png)
 
 
-**Verificación desde la consola:**
+### Verificación desde la consola:
 
 
 ![image.png](https://i.postimg.cc/cLj0JQyP/image.png)
+
+**Objetivos del próximo Sprint:**
+
+Sprint 2: Implementación de un sistema de recomendación basado en filtrado colaborativo y técnicas de clustering
+
+-   **Desarrollar algoritmos de recomendación basados en filtrado colaborativo:** Crear algoritmos eficientes que utilicen la similitud entre usuarios y productos para generar recomendaciones precisas.
+    
+-   **Implementar técnicas de clustering para mejorar las recomendaciones:** Agrupar usuarios y productos en clusters para identificar patrones y mejorar la relevancia de las recomendaciones.
+    
+-   **Implementar filtrado colaborativo basado en usuarios (User-Based Collaborative Filtering):** Recomendar productos a un usuario basándose en la similitud con otros usuarios. Este enfoque permitirá aprovechar las interacciones previas de usuarios similares para generar recomendaciones personalizadas.
+    
+-   **Implementar filtrado colaborativo basado en ítems (Item-Based Collaborative Filtering):** Recomendar productos similares a los que el usuario ya ha consumido. Este enfoque ayudará a identificar productos relevantes basándose en las preferencias históricas del usuario.
