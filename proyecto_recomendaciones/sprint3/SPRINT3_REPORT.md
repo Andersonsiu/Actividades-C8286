@@ -1,10 +1,10 @@
 ### Sprint 3: Optimización del Sistema de Recomendación Utilizando Técnicas de Paralelismo
 
-### 1. Introducción
+## 1. Introducción
 
 **Objetivos del Sprint:** El objetivo principal del Sprint 3 fue optimizar el rendimiento del sistema de recomendación mediante la implementación de técnicas de paralelismo y caching. Esto incluye identificar cuellos de botella, mejorar tiempos de procesamiento, realizar pruebas de carga, y configurar herramientas de monitoreo y logging para supervisar el rendimiento del sistema en tiempo real. También se buscó documentar todo el proceso en el repositorio de GitHub.
 
-### 2. Planificación
+## 2. Planificación
 
 **Tareas planificadas:**
 
@@ -17,7 +17,7 @@
 -   Documentación y preparación de la presentación final.
 
 
-### 3. Implementación
+## 3. Implementación
 
 **Descripción del trabajo realizado:** Durante este sprint, se identificaron los principales cuellos de botella del sistema, específicamente en tiempos de consulta a la base de datos y procesamiento de algoritmos de recomendación. Se implementaron técnicas de paralelismo utilizando `multiprocessing` y `threading`, y se optimizaron las consultas a MongoDB con índices adecuados. Además, se implementó Redis como sistema de caché para reducir la carga en la base de datos y mejorar los tiempos de respuesta. Finalmente, se realizaron pruebas de carga con Locust y se configuraron herramientas de monitoreo como Prometheus y Grafana.
 
@@ -85,7 +85,7 @@ class Recomendador:
 -   Implementación de Redis como sistema de caché.
 -   Pruebas de carga y configuración de herramientas de monitoreo.
 
-#### 5. Análisis y evaluación
+## 5. Análisis y evaluación
 
 **Comparación con los objetivos del Sprint:** Los objetivos iniciales del sprint se cumplieron exitosamente. Se mejoró significativamente el rendimiento del sistema de recomendación mediante la implementación de técnicas de paralelismo y caching. Las pruebas de carga demostraron una mejora notable en los tiempos de respuesta y la escalabilidad del sistema.
 
@@ -96,17 +96,12 @@ class Recomendador:
 -   Las herramientas de monitoreo y logging son esenciales para identificar y resolver problemas de rendimiento de manera proactiva.
 
 
-   
-## 5. Análisis y evaluación
-
-
-
-# Sin uso de Redis
+### Sin uso de Redis
 ![prueba1.png](https://i.postimg.cc/nhwNC7zW/prueba1.png)
 
 
 
-# Uso de Redis
+### Uso de Redis
 ![prueba1-redis.png](https://i.postimg.cc/wvz2vThP/prueba1-redis.png)
 
 
@@ -128,10 +123,10 @@ class Recomendador:
 **Conclusión:** La implementación de Redis para caching tuvo un impacto positivo significativo en el rendimiento del sistema de recomendación. Los tiempos de respuesta mejoraron drásticamente y la aplicación pudo manejar una carga mucho mayor sin fallos. Esto demuestra que el uso de Redis como mecanismo de cacheo puede mejorar considerablemente la eficiencia y escalabilidad de aplicaciones que requieren acceso rápido a datos frecuentemente consultados.
 
 
-# Monitoreo con Grafana, Prometheus y EKL stack
+### Monitoreo con Grafana, Prometheus y EKL stack
 
 
-## Grafana - app_request_count_total
+### Grafana - app_request_count_total
 
 ### Grafana - app_request_count_total 
 ![app-request-count-total.png](https://i.postimg.cc/LsLyS4Cq/app-request-count-total.png)
