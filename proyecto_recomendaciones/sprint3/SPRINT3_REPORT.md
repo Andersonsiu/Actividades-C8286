@@ -148,7 +148,7 @@ Esta imagen muestra el panel de Grafana monitoreando la métrica `app_request_co
 
 
 ### ElasticSearch Discover - flask-app-logs
-![elastik.png](https://i.postimg.cc/pVpkqT2f/elastik.png)
+[![elastik.png](https://i.postimg.cc/pVpkqT2f/elastik.png)](https://postimg.cc/SjbWKmYR)
 
 
 
