@@ -146,11 +146,8 @@ Esta imagen muestra el panel de Grafana monitoreando la métrica `app_request_co
 -   El monitoreo en tiempo real permite detectar rápidamente cualquier anomalía en la tasa de solicitudes.
 
 
-
 ### ElasticSearch Discover - flask-app-logs
-[![elastik.png](https://i.postimg.cc/pVpkqT2f/elastik.png)](https://postimg.cc/SjbWKmYR)
-
-
+![Captura-desde-2024-07-01-20-04-33.png](https://i.postimg.cc/ncNNBhWz/Captura-desde-2024-07-01-20-04-33.png)
 
 Esta imagen muestra el descubrimiento de logs en Kibana para el índice `flask-app-logs`. Se puede observar una lista de registros que contienen información detallada sobre las solicitudes procesadas por la aplicación.
 
@@ -163,7 +160,7 @@ Esta imagen muestra el descubrimiento de logs en Kibana para el índice `flask-a
 
 
 ### Grafana - Logs Count
-[![Captura-desde-2024-07-01-20-04-33.png](https://i.postimg.cc/ncNNBhWz/Captura-desde-2024-07-01-20-04-33.png)](https://postimg.cc/HV4SCddD)
+![Captura-desde-2024-07-01-15-13-13.png](https://i.postimg.cc/dVX38w9V/Captura-desde-2024-07-01-15-13-13.png)
 
 -   El gráfico de líneas muestra la cantidad de logs generados por la aplicación en intervalos de 20 ms.
 -   Los picos en el gráfico indican momentos de alta actividad en la generación de logs, que pueden correlacionarse con los picos de solicitudes observados en la primera imagen.
