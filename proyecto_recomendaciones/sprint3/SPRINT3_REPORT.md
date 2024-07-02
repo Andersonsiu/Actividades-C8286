@@ -1,10 +1,10 @@
-## Sprint 3: Optimización del Sistema de Recomendación Utilizando Técnicas de Paralelismo
+### Sprint 3: Optimización del Sistema de Recomendación Utilizando Técnicas de Paralelismo
 
-#### 1. Introducción
+### 1. Introducción
 
 **Objetivos del Sprint:** El objetivo principal del Sprint 3 fue optimizar el rendimiento del sistema de recomendación mediante la implementación de técnicas de paralelismo y caching. Esto incluye identificar cuellos de botella, mejorar tiempos de procesamiento, realizar pruebas de carga, y configurar herramientas de monitoreo y logging para supervisar el rendimiento del sistema en tiempo real. También se buscó documentar todo el proceso en el repositorio de GitHub.
 
-#### 2. Planificación
+### 2. Planificación
 
 **Tareas planificadas:**
 
@@ -17,7 +17,7 @@
 -   Documentación y preparación de la presentación final.
 
 
-#### 3. Implementación
+### 3. Implementación
 
 **Descripción del trabajo realizado:** Durante este sprint, se identificaron los principales cuellos de botella del sistema, específicamente en tiempos de consulta a la base de datos y procesamiento de algoritmos de recomendación. Se implementaron técnicas de paralelismo utilizando `multiprocessing` y `threading`, y se optimizaron las consultas a MongoDB con índices adecuados. Además, se implementó Redis como sistema de caché para reducir la carga en la base de datos y mejorar los tiempos de respuesta. Finalmente, se realizaron pruebas de carga con Locust y se configuraron herramientas de monitoreo como Prometheus y Grafana.
 
@@ -77,7 +77,7 @@ class Recomendador:
 -   Sincronización de procesos y manejo de estados compartidos en paralelismo.
 -   Manejo de grandes volúmenes de datos durante las pruebas de carga.
 
-#### 4. Resultados
+## 4. Resultados
 
 **Funcionalidades desarrolladas:**
 
@@ -97,7 +97,7 @@ class Recomendador:
 
 
    
-### 5. Análisis y evaluación
+## 5. Análisis y evaluación
 
 
 
