@@ -170,6 +170,26 @@ Las imágenes muestran que se han implementado y almacenado correctamente las re
 
 
 
-# Conclusión
+5. Análisis y evaluación
+Comparación con los objetivos del Sprint:
+El trabajo realizado durante el sprint cumplió con los objetivos establecidos. Los algoritmos implementados funcionan correctamente y se integraron con éxito en la base de datos.
 
-La implementación del sistema de recomendación ha sido exitosa, integrando algoritmos de filtrado colaborativo y clustering. Los resultados generados han sido almacenados correctamente en la base de datos MongoDB, permitiendo así una gestión eficiente y en tiempo real de las recomendaciones. La adición de datos sintéticos ha sido crucial para asegurar que los algoritmos tuvieran suficiente información para entrenarse y evaluarse de manera efectiva, mostrando que el sistema puede adaptarse a diferentes cantidades de datos y seguir funcionando correctamente.
+Lecciones aprendidas:
+
+La generación de datos sintéticos fue crucial para asegurar suficientes datos para el entrenamiento y la evaluación de los algoritmos.
+La integración con MongoDB y la optimización de las consultas son esenciales para el rendimiento del sistema de recomendación.
+Retroalimentación recibida:
+La retroalimentación del equipo fue positiva, destacando la importancia de la generación de datos sintéticos y la eficiencia de las consultas optimizadas en MongoDB.
+
+6. Plan para el próximo Sprint
+Objetivos del próximo Sprint:
+
+Optimizar el rendimiento del sistema de recomendación utilizando técnicas de paralelismo
+Preparar y presentar los resultados del proyecto
+Tareas planificadas:
+
+Identificar cuellos de botella en el rendimiento
+Implementar técnicas de paralelismo utilizando multiprocessing y threading
+Optimizar consultas a MongoDB
+Realizar pruebas de carga
+Implementar herramientas de monitoreo y logging
