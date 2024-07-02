@@ -178,7 +178,6 @@ Las imágenes muestran que se han implementado y almacenado correctamente las re
 -   La generación de datos sintéticos fue crucial para asegurar suficientes datos para el entrenamiento y la evaluación de los algoritmos.
 -   La integración con MongoDB y la optimización de las consultas son esenciales para el rendimiento del sistema de recomendación.
 
-**Retroalimentación recibida:** La retroalimentación del equipo fue positiva, destacando la importancia de la generación de datos sintéticos y la eficiencia de las consultas optimizadas en MongoDB.
 
 #### 6. Plan para el próximo Sprint
 
