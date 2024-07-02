@@ -1,61 +1,93 @@
 # Instrucciones para Configurar el Entorno
 
-## Requisitos
+Estas instrucciones te guiarán para configurar y ejecutar el sistema de recomendación en tu entorno local.
 
-Antes de comenzar, asegúrese de tener instalados los siguientes componentes en su sistema:
+## Requisitos Previos
 
-1. **Docker**: Para ejecutar MongoDB en un contenedor.
-2. **Python 3.10**: Lenguaje de programación utilizado en el proyecto.
-3. **Pip**: Administrador de paquetes para Python.
+-   Docker
+-   Docker Compose
+-   Python 3.8 o superior
+-   pip (gestor de paquetes de Python)
+-  MongoDB
 
-## Pasos para Configurar el Entorno
+## 1. Clonar el Repositorio
 
+Primero, clona el repositorio del proyecto desde GitHub.
 
-### 1. Configuración de MongoDB
+`git clone https://github.com/tu_usuario/tu_repositorio.git
+cd tu_repositorio` 
 
-#### a. Iniciar el Contenedor de MongoDB
+## 2. Configurar Variables de Entorno
 
+Crea un archivo `.env` en el directorio raíz del proyecto y define las siguientes variables de entorno:
 
-Si no tienes el contenedor de MongoDB, puedes crearlo usando Docker:
+- MONGO_INITDB_ROOT_USERNAME=admin
+- MONGO_INITDB_ROOT_PASSWORD=admin
+- MONGO_INITDB_DATABASE=recomendaciones
+- REDIS_HOST=redis
+- REDIS_PORT=6379` 
 
-- `docker pull mongo:4.4`
-- `docker run -d -p 27017:27017 --name my-mongo mongo:4.4` 
+## 3. Configurar el Entorno Python
 
+Crea un entorno virtual y activa el entorno:
 
-Para iniciar el contenedor en el futuro:
+``python3 -m venv myenv
+source myenv/bin/activate  # En Windows usa `myenv\Scripts\activate` `` 
 
-`docker start my-mongo` 
+Instala las dependencias del proyecto:
 
+`pip install -r requirements.txt` 
 
-#### b. Verificar la Configuración en MongoDB Compass
+## 4. Configurar Docker y Docker Compose
 
-Puedes verificar la estructura de la base de datos usando MongoDB Compass. Abre MongoDB Compass y conecta a `localhost:27017` para ver las colecciones y datos insertados.
+### Dockerfile
 
+El proyecto incluye varios Dockerfiles para diferentes servicios. Asegúrate de que estén en el directorio correcto (`docker/`).
 
-### 2. Población de la Base de Datos
+### docker-compose.yml
 
-Ejecuta el script para poblar la base de datos con datos de ejemplo:
+El archivo `docker-compose.yml` debe estar en el directorio raíz del proyecto. Asegúrate de que contenga los servicios necesarios (MongoDB, Redis, Flask, Locust, etc.).
 
-`python3 src/poblacion_datos.py` 
+## 5. Construir y Levantar los Contenedores
 
+Ejecuta el siguiente comando para construir y levantar todos los contenedores definidos en `docker-compose.yml`:
 
-### 3. Ejecutar el Motor de Recomendación
+`sudo docker-compose up --build` 
 
-Ejecuta los scripts del motor de recomendación para generar y evaluar las recomendaciones:
+Este comando descargará las imágenes necesarias, construirá los contenedores y los levantará. Asegúrate de que todos los servicios estén funcionando correctamente.
 
+## 6. Inicializar la Base de Datos
 
-- `python3 src/filtrado_colaborativo.py`
-- `python3 src/clustering.py` 
+Inicializa la base de datos MongoDB con datos de ejemplo:
 
-### 4. Ejecutar Jupyter Notebooks
+`sudo docker-compose run init_db` 
 
-Para visualizar los resultados y gráficos, abre los notebooks de Jupyter:
+## 7. Ejecutar el Servidor Flask
 
-`jupyter notebook` 
+Si el contenedor de Flask no se levanta automáticamente, puedes ejecutarlo manualmente:
 
-Abre los notebooks en el navegador y ejecuta las celdas para ver los análisis y visualizaciones.
+`sudo docker-compose up flask_app` 
 
-## Solución de Problemas
+## 8. Verificar el Funcionamiento
 
--   **Contenedor de Docker no Inicia**: Verifica si el puerto 27017 está libre o intenta reiniciar Docker.
--   **Errores de Conexión a MongoDB**: Asegúrate de que el contenedor de MongoDB está en ejecución y que estás utilizando la URL correcta (`mongodb://localhost:27017/`).
+Abre tu navegador y navega a `http://localhost:5000/test` para verificar que el servidor Flask esté funcionando correctamente.
+
+## 9. Ejecutar Pruebas de Carga con Locust
+
+Levanta el servicio Locust para realizar pruebas de carga:
+
+`sudo docker-compose up locust` 
+
+Luego, abre tu navegador y navega a `http://localhost:8089` para acceder a la interfaz de Locust y realizar pruebas de carga.
+
+## 10. Monitoreo y Logging
+
+Los servicios de monitoreo y logging (Prometheus, Grafana, ELK stack) se configuran y levantan automáticamente con Docker Compose. Asegúrate de que los contenedores correspondientes estén corriendo y configura los dashboards en Grafana.
+
+### Acceder a Grafana
+
+Abre tu navegador y navega a `http://localhost:3000` para acceder a Grafana. Usa las credenciales por defecto (usuario: `admin`, contraseña: `admin`) para iniciar sesión y configurar tus dashboards.
+
+## Conclusión
+
+Siguiendo estos pasos, deberías tener el entorno completo configurado y funcionando en tu máquina local. Si encuentras algún problema durante el proceso de configuración, revisa la documentación y los archivos de configuración para asegurarte de que todo esté correctamente definido.
