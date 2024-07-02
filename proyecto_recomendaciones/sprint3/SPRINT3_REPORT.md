@@ -126,8 +126,6 @@ class Recomendador:
 ### Monitoreo con Grafana, Prometheus y EKL stack
 
 
-### Grafana - app_request_count_total
-
 ### Grafana - app_request_count_total 
 ![app-request-count-total.png](https://i.postimg.cc/LsLyS4Cq/app-request-count-total.png)
 
