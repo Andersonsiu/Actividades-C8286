@@ -134,7 +134,7 @@ class Recomendador:
 ## Grafana - app_request_count_total
 
 ### Grafana - app_request_count_total 
-[![app-request-count-total.png](https://i.postimg.cc/LsLyS4Cq/app-request-count-total.png)]
+![app-request-count-total.png](https://i.postimg.cc/LsLyS4Cq/app-request-count-total.png)
 
 
 Esta imagen muestra el panel de Grafana monitoreando la métrica `app_request_count_total`, que indica el número total de solicitudes realizadas a la aplicación Flask. Los picos en el gráfico representan momentos en los que se hicieron muchas solicitudes simultáneamente.
@@ -149,6 +149,8 @@ Esta imagen muestra el panel de Grafana monitoreando la métrica `app_request_co
 
 ### ElasticSearch Discover - flask-app-logs
 ![elastik.png](https://i.postimg.cc/pVpkqT2f/elastik.png)
+
+
 
 Esta imagen muestra el descubrimiento de logs en Kibana para el índice `flask-app-logs`. Se puede observar una lista de registros que contienen información detallada sobre las solicitudes procesadas por la aplicación.
 
