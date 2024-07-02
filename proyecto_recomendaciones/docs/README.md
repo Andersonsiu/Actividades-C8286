@@ -33,7 +33,7 @@ Este proyecto tiene como objetivo desarrollar un motor de recomendación utiliza
 - **Base de Datos**: MongoDB
 - **Lenguaje de Programación**: Python
 - **Bibliotecas**: pandas, scikit-learn, matplotlib
-- **Contenedores**: Docker
+- **Contenedores**: Docker, Docker Compose
 
 ### Autor
 
