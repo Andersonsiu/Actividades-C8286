@@ -131,8 +131,11 @@ class Recomendador:
 # Monitoreo con Grafana, Prometheus y EKL stack
 
 
+## Grafana - app_request_count_total
+
 ### Grafana - app_request_count_total 
 ![log-counts.png](https://i.postimg.cc/KYP7dSd5/log-counts.png)
+
 
 Esta imagen muestra el panel de Grafana monitoreando la métrica `app_request_count_total`, que indica el número total de solicitudes realizadas a la aplicación Flask. Los picos en el gráfico representan momentos en los que se hicieron muchas solicitudes simultáneamente.
 
