@@ -1,27 +1,45 @@
-# Introducción
+### Sprint 2: Implementación de Algoritmos de Recomendación y Evaluación
 
-El objetivo del Sprint 2 fue implementar un sistema de recomendación basado en técnicas de filtrado colaborativo y clustering para mejorar la precisión de las recomendaciones. Además, se buscó evaluar la eficacia de estos algoritmos utilizando métricas estándar y almacenar los resultados en una base de datos MongoDB.
+#### 1. Introducción
 
-**Objetivos**
+**Objetivos del Sprint:** El objetivo principal del Sprint 2 fue implementar y evaluar algoritmos de recomendación utilizando filtrado colaborativo y técnicas de clustering. Estos objetivos se alinean con el objetivo general del proyecto de crear un sistema de recomendación eficiente y escalable.
 
-- Desarrollar algoritmos de recomendación basados en filtrado colaborativo.
+#### 2. Planificación
 
-- Implementar técnicas de clustering para mejorar las recomendaciones.
+**Tareas planificadas:**
 
-- Evaluar la precisión y cobertura de los algoritmos.
-Integrar los algoritmos de recomendación con MongoDB para obtener y almacenar datos en tiempo real.
+-   Implementar Filtrado Colaborativo Basado en Usuarios
+-   Implementar Filtrado Colaborativo Basado en Ítems
+-   Implementar Clustering de Usuarios utilizando K-means
+-   Integrar los algoritmos con MongoDB
+-   Generar y utilizar datos sintéticos
+-   Evaluar los algoritmos implementados
 
+#### 3. Implementación
 
-# Filtrado Colaborativo
+**Descripción del trabajo realizado:** Se implementaron y evaluaron diversos algoritmos de recomendación. Se generaron datos sintéticos para superar la falta de datos suficientes y se integraron los resultados en MongoDB.
 
-- **Filtrado Colaborativo Basado en Usuarios (User-Based Collaborative Filtering)**
+**Algoritmos y métodos:**
 
-Se implementó un algoritmo de filtrado colaborativo basado en la similitud entre usuarios para recomendar productos. Este algoritmo calcula la similitud del coseno entre las interacciones de los usuarios y recomienda productos que otros usuarios similares han interactuado.
+-   **Filtrado Colaborativo Basado en Usuarios:** Se calculó la similitud del coseno entre las interacciones de los usuarios y se recomendaron productos que otros usuarios similares han interactuado.
+    
+-   **Filtrado Colaborativo Basado en Ítems:** Se calculó la similitud del coseno entre los productos basándose en las interacciones de los usuarios y se recomendaron productos similares a los que el usuario ya ha consumido.
+    
+-   **Clustering de Usuarios utilizando K-means:** Se agruparon los usuarios en clusters basados en sus interacciones y se generaron recomendaciones basadas en los productos más populares dentro del cluster.
+    
 
+**Desafíos encontrados:** Durante el desarrollo, se encontraron desafíos relacionados con la falta de datos suficientes y la necesidad de generar datos sintéticos. Además, se enfrentaron problemas de eficiencia en la integración de los algoritmos con MongoDB, que se resolvieron optimizando las consultas y la estructura de la base de datos.
 
-- **Filtrado Colaborativo Basado en Ítems (Item-Based Collaborative Filtering)**
+#### 4. Resultados
 
-Se implementó un algoritmo de filtrado colaborativo basado en la similitud entre ítems para recomendar productos. Este algoritmo calcula la similitud del coseno entre los productos basándose en las interacciones de los usuarios y recomienda productos que son similares a los que el usuario ya ha consumido.
+**Funcionalidades desarrolladas:**
+
+-   Recomendaciones basadas en la similitud entre usuarios
+-   Recomendaciones basadas en la similitud entre ítems
+-   Recomendaciones basadas en clusters de usuarios
+-   Integración de los resultados de las recomendaciones con MongoDB
+
+**Pruebas realizadas:** Se realizaron pruebas unitarias y de integración para asegurar el correcto funcionamiento de los algoritmos implementados. También se llevaron a cabo pruebas de rendimiento para evaluar la eficiencia de las recomendaciones generadas.
 
 
 
