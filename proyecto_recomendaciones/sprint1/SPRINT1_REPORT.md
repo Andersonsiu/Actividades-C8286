@@ -81,7 +81,7 @@
 
 
 
-# 2. Base de Datos MongoDB Configurada**
+# Base de Datos MongoDB Configurada**
 
 **Pasos para Configurar MongoDB y Crear las Colecciones e Índices**:
 
@@ -97,7 +97,7 @@
 **Índice de Texto en nombre y descripcion (productos)**: Mejora búsquedas de productos por texto en nombre y descripción.
 
 
-# 3. Datos de Ejemplo Insertados y Validados:
+# Datos de Ejemplo Insertados y Validados:
 
 ![image.png](https://i.postimg.cc/8C1shRnc/image.png)
 
@@ -117,7 +117,6 @@
 
 
 **Verificación desde la consola:**
-
 
 
 ![image.png](https://i.postimg.cc/cLj0JQyP/image.png)
