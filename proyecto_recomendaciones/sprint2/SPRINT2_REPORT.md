@@ -169,27 +169,28 @@ Las imágenes muestran que se han implementado y almacenado correctamente las re
 
 
 
+#### 5. Análisis y evaluación
 
-5. Análisis y evaluación
-Comparación con los objetivos del Sprint:
-El trabajo realizado durante el sprint cumplió con los objetivos establecidos. Los algoritmos implementados funcionan correctamente y se integraron con éxito en la base de datos.
+**Comparación con los objetivos del Sprint:** El trabajo realizado durante el sprint cumplió con los objetivos establecidos. Los algoritmos implementados funcionan correctamente y se integraron con éxito en la base de datos.
 
-Lecciones aprendidas:
+**Lecciones aprendidas:**
 
-La generación de datos sintéticos fue crucial para asegurar suficientes datos para el entrenamiento y la evaluación de los algoritmos.
-La integración con MongoDB y la optimización de las consultas son esenciales para el rendimiento del sistema de recomendación.
-Retroalimentación recibida:
-La retroalimentación del equipo fue positiva, destacando la importancia de la generación de datos sintéticos y la eficiencia de las consultas optimizadas en MongoDB.
+-   La generación de datos sintéticos fue crucial para asegurar suficientes datos para el entrenamiento y la evaluación de los algoritmos.
+-   La integración con MongoDB y la optimización de las consultas son esenciales para el rendimiento del sistema de recomendación.
 
-6. Plan para el próximo Sprint
-Objetivos del próximo Sprint:
+**Retroalimentación recibida:** La retroalimentación del equipo fue positiva, destacando la importancia de la generación de datos sintéticos y la eficiencia de las consultas optimizadas en MongoDB.
 
-Optimizar el rendimiento del sistema de recomendación utilizando técnicas de paralelismo
-Preparar y presentar los resultados del proyecto
-Tareas planificadas:
+#### 6. Plan para el próximo Sprint
 
-Identificar cuellos de botella en el rendimiento
-Implementar técnicas de paralelismo utilizando multiprocessing y threading
-Optimizar consultas a MongoDB
-Realizar pruebas de carga
-Implementar herramientas de monitoreo y logging
+**Objetivos del próximo Sprint:**
+
+-   Optimizar el rendimiento del sistema de recomendación utilizando técnicas de paralelismo
+-   Preparar y presentar los resultados del proyecto
+
+**Tareas planificadas:**
+
+-   Identificar cuellos de botella en el rendimiento
+-   Implementar técnicas de paralelismo utilizando `multiprocessing` y `threading`
+-   Optimizar consultas a MongoDB
+-   Realizar pruebas de carga
+-   Implementar herramientas de monitoreo y logging
