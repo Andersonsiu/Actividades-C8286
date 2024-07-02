@@ -124,7 +124,7 @@
 
 ![image.png](https://i.postimg.cc/cLj0JQyP/image.png)
 
-**Objetivos del próximo Sprint:**
+## 6. Objetivos del próximo Sprint:
 
 Sprint 2: Implementación de un sistema de recomendación basado en filtrado colaborativo y técnicas de clustering
 
