@@ -1,16 +1,30 @@
-# Entregables:
+### Sprint 1: Diseño e Implementación Inicial del Sistema de Recomendación
 
-- Diseño documentado del esquema de la base de datos.
+#### 1. Introducción
 
-- Base de datos MongoDB configurada con colecciones e índices definidos.
+**Objetivos del Sprint:**
 
-- Datos de usuarios, productos e interacciones insertados y validados en la base de datos.
+-   Diseñar y documentar el esquema de la base de datos.
+-   Configurar la base de datos MongoDB con colecciones e índices definidos.
+-   Insertar y validar los datos de usuarios, productos e interacciones en la base de datos.
 
+#### 2. Planificación
 
-1. Diseño Documentado del Esquema de la Base de Datos
+**Tareas planificadas:**
 
+-   Diseño del esquema de la base de datos.
+-   Configuración de MongoDB.
+-   Definición e implementación de colecciones e índices.
+-   Inserción y validación de datos de ejemplo.
 
-# Diagrama del Esquema de la Base de Datos:
+**Asignación de tareas:** Cada tarea fue realizada por el equipo de desarrollo de manera colaborativa.
+
+**Cronograma:** El cronograma detallado muestra las fechas de inicio y fin de cada tarea, así como los hitos importantes, como el diseño del esquema y la configuración de MongoDB.
+
+#### 3. Implementación
+
+**Descripción del trabajo realizado:** Se diseñó y documentó el esquema de la base de datos, se configuró MongoDB y se definieron las colecciones e índices. Además, se insertaron y validaron datos de ejemplo para asegurar el correcto funcionamiento de la base de datos.
+
 
 
 ![image.png](https://i.postimg.cc/xTxfbrVk/image.png)
