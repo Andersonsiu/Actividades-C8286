@@ -80,6 +80,7 @@
    - Esto indica que cada interacción está asociada a un producto específico.
 
 
+#### 4. Resultados
 
 # Base de Datos MongoDB Configurada**
 
@@ -109,6 +110,8 @@
 
 ![image.png](https://i.postimg.cc/nVQ7Vk8f/image.png)
 
+
+#### 5. Análisis y evaluación
 
 # Validación de los Datos Insertados:
 
