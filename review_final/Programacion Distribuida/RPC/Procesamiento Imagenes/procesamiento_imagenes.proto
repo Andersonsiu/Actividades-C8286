@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package imagenes;
+
+service ProcesamientoImagenes {
+  rpc Filtrar (ImagenRequest) returns (ImagenResponse);
+  rpc Transformar (ImagenRequest) returns (ImagenResponse);
+  rpc Analizar (ImagenRequest) returns (AnalisisResponse);
+}
+
+message ImagenRequest {
+  bytes imagen = 1;
+  string operacion = 2;  // e.g., 'blur', 'rotate', 'edge_detection'
+}
+
+message ImagenResponse {
+  bytes imagen = 1;
+}
+
+message AnalisisResponse {
+  string resultado = 1;
+}
