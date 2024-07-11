@@ -1,0 +1,22 @@
+Ejercicio 8 : Sistema distribuido de procesamiento de imágenes usando RPC
+
+Objetivo:
+
+Desarrollar un sistema distribuido que realice procesamiento de imágenes utilizando RPC para invocar procedimientos remotos.
+
+Descripción del ejercicio:
+
+Diseña una API RPC que permita la ejecución remota de operaciones de procesamiento de imágenes como filtrado, transformación y análisis.
+Implementa la lógica de procesamiento de imágenes en el servidor RPC.
+Desarrolla un cliente que distribuya las tareas de procesamiento de imágenes entre múltiples nodos utilizando llamadas RPC.
+Implementa mecanismos de autenticación y autorización para asegurar que solo clientes autorizados puedan invocar los procedimientos.
+Asegura la consistencia y coherencia de los datos utilizando técnicas de sincronización.
+Realiza pruebas de rendimiento y escalabilidad con diferentes tamaños de imágenes y números de clientes concurrentes.
+Puntos clave a desarrollar:
+
+Diseño e implementación de la API RPC.
+Lógica de procesamiento de imágenes en un entorno distribuido.
+Distribución de tareas y balanceo de carga.
+Seguridad y autenticación.
+Sincronización de datos.
+Pruebas de rendimiento y escalabilidad.
